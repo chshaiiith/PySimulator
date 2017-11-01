@@ -1,0 +1,13 @@
+from request_stream import RequestStream
+import simulator
+from possion import Possion
+
+
+
+req_stream = RequestStream()
+simulator.run()
+
+# p = Possion(rate = 1)
+# for i in range(0, 100):
+#     print p.next()
+#

@@ -11,7 +11,10 @@ class RequestStream():
         self.arrival = Arrival()
         self.request = Request()
 
+        self.req_handler =  Requesthandler()
+
         self.add_arrival_event()
+
 
 
     def add_arrival_event(self):
@@ -20,9 +23,11 @@ class RequestStream():
 
 
         event = {
-            "request" : self.request.next_request(),
+            "request" : request,
             "time": request["start_time"],
-            "callback" : callback
+            "callback" : callback,
+            "stream": self
+
         }
 
         simulator.schedule(event)
@@ -30,5 +35,7 @@ class RequestStream():
 
 
 def callback(event):
-    Requesthandler.add_request(event)
+    event["stream"].req_handler.add_request(event["request"])
+    event["stream"].add_arrival_event()
+
     return

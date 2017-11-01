@@ -7,8 +7,8 @@ class RandomPolicy:
             config = json.load(fp)
 
         self.number_of_servers = config["server"]["numberOfServers"]
-        self.read_server = config["readServer"]
-        self.write_server = config["writeServer"]
+        self.read_server = config["server"]["readServer"]
+        self.write_server = config["server"]["writeServer"]
         self.serverlist = [x for x in range(0, self.number_of_servers)]
 
     def get_server(self, type_of_request):

@@ -1,16 +1,16 @@
 {
   "arrival": {
-    // supports deterministic, poisson
-    "distribution" : "deterministic"
+    "distribution" : "poisson"
   },
   "job": {
-    // supports deterministic, dete
-    "distribution": "deterministic"
+    "distribution": "poisson"
   },
-
   "server" : {
     "numberOfServers": 5,
-    "writeServer": 3,
-    "readServer" : 3
+    "writeServer": 5,
+    "readServer" : 5,
+    "allocationPolicy": "random",
+    "noOfWriteResponse": 3,
+    "noOfReadResponse": 3
   }
 }
