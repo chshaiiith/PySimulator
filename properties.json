@@ -1,6 +1,6 @@
 {
   "arrival": {
-    "distribution" : "poisson"
+    "distribution" : "poisson",
     "rate" : 1
   },
   "job": {
