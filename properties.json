@@ -16,7 +16,8 @@
     "noOfReadResponse": 8
   },
   "stats" : {
-    "noOfRequest": 10000
+    "noOfRequest": 10000,
+    "fileName" : "Output"
   },
   "request": {
     "cancellation":false,

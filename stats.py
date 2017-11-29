@@ -4,15 +4,16 @@ total_request = 0
 total_time = 0
 # Used for file numbering
 total_files = 0
-file_name = "24_8_queue_n_1"
-f = open(file_name + str(total_files), "a+")
 import os
 
 class  Stats:
     def __init__(self):
         global f
+        global file_name
         with open("properties.json") as fp:
             config = json.load(fp)
+
+        file_name = config["stats"]["fileName"]
         self.no_of_request = config["stats"]["noOfRequest"]
 
         if os.path.exists(file_name + str(total_files)):
