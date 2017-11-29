@@ -6,11 +6,19 @@
     "distribution": "poisson"
   },
   "server" : {
-    "numberOfServers": 5,
-    "writeServer": 5,
-    "readServer" : 5,
+    "numberOfServers": 100,
+    "writeServer": 24,
+    "readServer" : 24,
     "allocationPolicy": "random",
-    "noOfWriteResponse": 3,
-    "noOfReadResponse": 3
+    "noOfWriteResponse": 24,
+    "noOfReadResponse": 8
+  },
+  "stats" : {
+    "noOfRequest": 10000
+  },
+  "request": {
+    "cancellation":false,
+    "readPercentage": 100,
+    "writePercentage": 0
   }
 }

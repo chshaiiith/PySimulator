@@ -1,6 +1,7 @@
 import random
 import json
 
+
 class RandomPolicy:
     def __init__(self):
         with open("properties.json") as fp:
@@ -11,9 +12,10 @@ class RandomPolicy:
         self.write_server = config["server"]["writeServer"]
         self.serverlist = [x for x in range(0, self.number_of_servers)]
 
-    def get_server(self, type_of_request):
+    def get_server(self, type_of_request, possible_servers=None):
         if type_of_request == "read":
             count = self.read_server
+            return random.sample(possible_servers, count)
         else:
             count = self.write_server
 
