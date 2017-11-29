@@ -1,9 +1,11 @@
 {
   "arrival": {
     "distribution" : "poisson"
+    "rate" : 1
   },
   "job": {
-    "distribution": "poisson"
+    "distribution": "poisson",
+    "rate": 1
   },
   "server" : {
     "numberOfServers": 100,

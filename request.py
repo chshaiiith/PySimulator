@@ -18,7 +18,8 @@ class Request:
         with open("properties.json") as fp:
             config = json.load(fp)
 
-        self.distribution = Distribution.get_distribution(config["job"]["distribution"], rate = 1)
+        rate = config["job"]["rate"]
+        self.distribution = Distribution.get_distribution(config["job"]["distribution"], rate = rate)
 
         #In case of mixed workload these variables represent the % of read and writes in workload
         self.type = type

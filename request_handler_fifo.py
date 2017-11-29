@@ -32,8 +32,8 @@ class RequesthandlerFiFo:
         for i in range(0, config["server"]["numberOfServers"]):
             self.server_queues.append(Queue.Queue())
             completion_time.append(0)
-
-        self.dist = Distribution.get_distribution(config["job"]["distribution"] , rate=1)
+        rate = config["job"]["rate"]
+        self.dist = Distribution.get_distribution(config["job"]["distribution"] , rate=rate)
 
 
 
