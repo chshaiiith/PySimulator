@@ -2,7 +2,7 @@ import Queue
 import stats
 
 
-# XXX: Override the comparator of prioority queue to support our functionality
+# XXX: Override the comparator of priority queue to support our functionality
 
 Q = Queue.PriorityQueue()
 time = 0
@@ -35,7 +35,7 @@ def reset():
     while not Q.empty():
         temp = Q.get()
 
-    # Reseting request count
+    # Resetting request count
     global current_request_count
     current_request_count = 0
 
